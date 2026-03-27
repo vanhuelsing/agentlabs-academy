@@ -1,242 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Legal Notice — agentlabs.academy</title>
+  <title>Impressum — agentlabs.academy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Source Serif 4', Georgia, serif; background: #fff; color: #000; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: inherit; }
 
-    :root {
-      --black:    #000000;
-      --white:    #FFFFFF;
-      --accent:   #7C3AED;
-      --white-60: rgba(255,255,255,0.6);
-      --white-20: rgba(255,255,255,0.12);
-      --white-08: rgba(255,255,255,0.06);
-      --font:     'Inter', system-ui, sans-serif;
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 64px;
+      background: #fff; border-bottom: 1px solid #000;
     }
+    nav img { height: 28px; }
+    nav a.nav-cta { font-weight: 600; font-size: 0.9rem; text-decoration: none; color: #000; }
+    nav a.nav-cta:hover { text-decoration: underline; }
 
-    html { scroll-behavior: smooth; }
+    main { flex: 1; padding: 80px 48px 120px; }
+    .inner { max-width: 640px; margin: 0 auto; }
 
-    body {
-      font-family: var(--font);
-      background: var(--black);
-      color: var(--white);
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+    .back { font-size: 0.85rem; color: #888; text-decoration: none; display: inline-block; margin-bottom: 48px; letter-spacing: 0.05em; }
+    .back:hover { color: #000; }
 
-    /* ── HEADER ── */
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--black);
-      border-bottom: 1px solid var(--white-20);
-      padding: 0 48px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    h1 { font-family: 'Archivo Black', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); text-transform: uppercase; line-height: 1.05; margin-bottom: 64px; }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      flex-shrink: 0;
-    }
+    .section { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid #000; }
+    .section:last-child { border-bottom: none; }
+    .section h2 { font-family: 'Archivo Black', sans-serif; font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px; }
+    .section p, .section address { font-size: 1rem; line-height: 1.7; font-style: normal; color: #000; }
+    .section p + p { margin-top: 12px; }
 
-    .nav-cta {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--white);
-      text-decoration: none;
-      background: var(--accent);
-      padding: 9px 20px;
-      border-radius: 8px;
-      letter-spacing: -0.01em;
-      transition: opacity 0.15s;
-    }
-    .nav-cta:hover { opacity: 0.88; }
+    .lang-switch { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 32px; }
+    .lang-switch a { color: #888; text-decoration: none; margin-right: 16px; }
+    .lang-switch a:hover { color: #000; }
+    .lang-switch a.active { color: #000; font-weight: 600; }
 
-    /* ── MAIN CONTENT ── */
-    .page-content {
-      flex: 1;
-      padding: 72px 24px 96px;
-    }
-    .page-content__inner {
-      max-width: 640px;
-      margin: 0 auto;
-    }
+    footer { padding: 40px 48px; border-top: 1px solid #888; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    footer p { font-size: 0.8rem; color: #888; }
+    footer nav { position: static; border: none; background: none; height: auto; padding: 0; gap: 24px; }
+    footer nav a { font-size: 0.8rem; color: #888; text-decoration: none; }
+    footer nav a:hover { color: #000; }
 
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--white-60);
-      text-decoration: none;
-      margin-bottom: 48px;
-      letter-spacing: -0.01em;
-      transition: color 0.15s;
-    }
-    .back-link:hover { color: var(--white); }
-
-    .page-eyebrow {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-
-    .page-title {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      line-height: 1.05;
-      color: var(--white);
-      margin-bottom: 48px;
-    }
-
-    .legal-section {
-      margin-bottom: 40px;
-      padding-bottom: 40px;
-      border-bottom: 1px solid var(--white-20);
-    }
-    .legal-section:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .legal-section h2 {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -0.02em;
-      margin-bottom: 14px;
-    }
-
-    .legal-section p,
-    .legal-section address {
-      font-size: 15px;
-      line-height: 1.7;
-      color: var(--white-60);
-      font-style: normal;
-    }
-
-    .legal-section a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .legal-section a:hover { text-decoration: underline; }
-
-    /* ── FOOTER ── */
-    .footer {
-      padding: 28px 48px;
-      border-top: 1px solid var(--white-20);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-    }
-    .footer__copy { font-size: 12px; color: rgba(255,255,255,0.25); }
-    .footer__links { display: flex; gap: 24px; }
-    .footer__link {
-      font-size: 12px;
-      color: rgba(255,255,255,0.25);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-    .footer__link:hover { color: var(--white-60); }
-    .footer__link--active { color: rgba(255,255,255,0.5); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
-      .header { padding: 0 20px; }
-      .footer { padding: 24px 20px; }
-      .page-content { padding: 48px 20px 72px; }
-    }
+    @media (max-width: 600px) { nav, footer { padding: 0 24px; } nav { height: 56px; } main { padding: 60px 24px 80px; } footer { padding: 32px 24px; } }
   </style>
 </head>
 <body>
+<nav>
+  <a href="/"><img src="/logos/agentlabs_academy_logo_complete.png" alt="agentlabs.academy"></a>
+  <a href="/#kontakt" class="nav-cta">Zugang anfordern ↗</a>
+</nav>
 
-  <!-- HEADER -->
-  <header class="header">
-    <a href="/" class="logo" aria-label="agentlabs.academy">
-      <img src="../../logos/agentlabs_academy_logo_complete.png" alt="agentlabs.academy" style="max-height:44px;width:auto;filter:invert(1) brightness(2);">
-    </a>
-    <a href="/#waitlist" class="nav-cta">Join waitlist →</a>
-  </header>
+<main>
+  <div class="inner">
+    <a href="/" class="back">← Zurück</a>
 
-  <!-- MAIN CONTENT -->
-  <main class="page-content">
-    <div class="page-content__inner">
-
-      <a href="/" class="back-link">← Back to agentlabs.academy</a>
-
-      <p class="page-eyebrow">Legal</p>
-      <h1 class="page-title">Legal Notice</h1>
-
-      <div class="legal-section">
-        <h2>Impressum gemäß § 5 TMG</h2>
-        <address>
-          Daniel Van Huelsing<br>
-          51107 Cologne<br>
-          Germany<br><br>
-          Email: <a href="mailto:hello@agentlabs.academy">hello@agentlabs.academy</a>
-        </address>
-      </div>
-
-      <div class="legal-section">
-        <h2>Responsible for content (§ 18 Abs. 2 MStV)</h2>
-        <address>
-          Daniel Van Huelsing<br>
-          51107 Cologne<br>
-          Germany
-        </address>
-      </div>
-
-      <div class="legal-section">
-        <h2>Disclaimer</h2>
-        <p>agentlabs.academy is a pre-launch project. No courses or services are currently offered for sale. The platform is in development. All content on this website is for informational and illustrative purposes only.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>Liability for content</h2>
-        <p>The contents of this website have been created with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content. As a service provider, we are responsible for our own content on these pages under general legislation (§ 7 Abs. 1 TMG). However, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.</p>
-      </div>
-
-      <div class="legal-section">
-        <h2>Copyright</h2>
-        <p>The content and works on this website are subject to copyright law. Any use beyond the scope of copyright law requires prior written consent.</p>
-      </div>
-
+    <div class="lang-switch">
+      <a href="/legal.html" class="active">DE</a>
+      <a href="/en/legal.html">EN</a>
+      <a href="/fr/legal.html">FR</a>
     </div>
-  </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <span class="footer__copy">© 2026 agentlabs.academy</span>
-    <nav class="footer__links">
-      <a href="/legal.html" class="footer__link footer__link--active">Legal Notice</a>
-      <a href="/privacy.html" class="footer__link">Privacy Policy</a>
-      <a href="mailto:hello@agentlabs.academy" class="footer__link">Contact</a>
-    </nav>
-  </footer>
+    <h1>Impressum</h1>
 
+    <div class="section">
+      <h2>Angaben gemäß § 5 TMG</h2>
+      <address>
+        Daniel Van Huelsing<br>
+        51107 Köln<br>
+        Deutschland<br><br>
+        E-Mail: <a href="mailto:[EMAIL]">[EMAIL]</a>
+      </address>
+    </div>
+
+    <div class="section">
+      <h2>Verantwortlich für den Inhalt (§ 18 Abs. 2 MStV)</h2>
+      <address>
+        Daniel Van Huelsing<br>
+        51107 Köln<br>
+        Deutschland
+      </address>
+    </div>
+
+    <div class="section">
+      <h2>Hinweis</h2>
+      <p>agentlabs.academy befindet sich im Aufbau. Es werden aktuell keine Kurse oder Dienstleistungen zum Kauf angeboten. Alle Inhalte dieser Website dienen ausschließlich Informationszwecken.</p>
+    </div>
+
+    <div class="section">
+      <h2>Haftung für Inhalte</h2>
+      <p>Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.</p>
+    </div>
+
+    <div class="section">
+      <h2>Urheberrecht</h2>
+      <p>Die durch den Betreiber dieser Website erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedarf der vorherigen schriftlichen Zustimmung.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 agentlabs.academy</p>
+  <nav>
+    <a href="/legal.html">Impressum</a>
+    <a href="/privacy.html">Datenschutz</a>
+    <a href="mailto:[EMAIL]">Kontakt</a>
+  </nav>
+</footer>
 </body>
 </html>
